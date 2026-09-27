@@ -9,7 +9,7 @@ const MAX_FILES = 5;
 const DEADLINE = process.env.NEXT_PUBLIC_UPLOAD_DEADLINE;
 const STORAGE_KEY = 'swe_fyb_uploader';
 
-const LEVELS = ['100 Level', '200 Level', '300 Level', '400 Level', 'SIWES / IT', 'Final Year'];
+const LEVELS = ['100 Level', '200 Level', '300 Level', '400 Level'];
 const CATEGORIES = [
   'Corporate Photos',
   'Academic Moment',
@@ -182,7 +182,7 @@ export default function Home() {
             </label>
             <input id="fullName" type="text" value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              placeholder="e.g. Ada Lovelace" required />
+              placeholder="e.g. Otiti Chigoziem Psalm" required />
             {remembered && <p className="remembered-note">Welcome back — name pre-filled from your last visit.</p>}
           </div>
 
@@ -191,7 +191,7 @@ export default function Home() {
             <label htmlFor="nickname">Nickname (optional)</label>
             <input id="nickname" type="text" value={nickname}
               onChange={(e) => setNickname(e.target.value)}
-              placeholder="what your set calls you" />
+              placeholder="e.g Big H" />
           </div>
 
           {/* Level */}
