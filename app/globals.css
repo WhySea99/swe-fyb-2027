@@ -37,10 +37,14 @@ a { color: inherit; }
   isolation: isolate;
   padding: 64px 0 56px;
   margin-bottom: 40px;
-  border-radius: 6px;
+  margin-left: -24px;
+  margin-right: -24px;
+  border-radius: 0px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  min-height: 320px;
+  width: calc(100% + 48px);
 }
 
 /* Dark overlay so text always reads over the photo bg */
