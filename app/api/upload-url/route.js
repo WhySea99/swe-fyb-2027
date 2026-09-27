@@ -12,6 +12,11 @@ export async function POST(request) {
   const fullName = (body.fullName || '').trim();
   const nickname = (body.nickname || '').trim();
   const fileName = (body.fileName || 'photo.jpg').trim();
+  const allowPublicFeature = body.allowPublicFeature === true;
+  const level = (body.level || '').trim();
+  const category = (body.category || '').trim();
+  const caption = (body.caption || '').trim();
+  const eventName = (body.eventName || '').trim();
 
   if (!fullName) {
     return NextResponse.json({ error: 'Full name is required.' }, { status: 400 });
@@ -48,6 +53,11 @@ export async function POST(request) {
     full_name: fullName,
     nickname: nickname || null,
     photo_path: path,
+    allow_public_feature: allowPublicFeature,
+    level: level || null,
+    category: category || null,
+    caption: caption || null,
+    event_name: eventName || null,
   });
 
   if (insertError) {

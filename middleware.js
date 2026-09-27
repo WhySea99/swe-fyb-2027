@@ -7,7 +7,7 @@ export async function middleware(request) {
   const authed = await isValidSession(session);
 
   const protectedPage = pathname.startsWith('/admin') && pathname !== '/admin/login';
-  const protectedApi = ['/api/photos', '/api/delete', '/api/export'].some((p) =>
+  const protectedApi = ['/api/photos', '/api/delete', '/api/export', '/api/rename'].some((p) =>
     pathname.startsWith(p)
   );
 
@@ -21,5 +21,5 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/api/photos/:path*', '/api/delete/:path*', '/api/export/:path*'],
+  matcher: ['/admin/:path*', '/api/photos/:path*', '/api/delete/:path*', '/api/export/:path*', '/api/rename/:path*'],
 };

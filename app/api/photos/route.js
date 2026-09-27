@@ -4,7 +4,7 @@ import { supabaseAdmin, BUCKET } from '../../../lib/supabaseAdmin';
 export async function GET() {
   const { data: rows, error } = await supabaseAdmin
     .from('submissions')
-    .select('id, full_name, nickname, photo_path, created_at')
+    .select('id, full_name, nickname, photo_path, created_at, allow_public_feature, level, category, caption, event_name')
     .order('created_at', { ascending: false });
 
   if (error) {
