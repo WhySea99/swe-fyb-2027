@@ -137,7 +137,7 @@ export default function Home() {
     setBusy(false);
     if (!anyFailed) {
       try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ fullName: fullName.trim(), nickname: nickname.trim() })); } catch (_) {}
-      setStatus({ type: 'success', text: 'Added to memories 🤍' });
+      setStatus({ type: 'success', text: 'Your photo has been added to the SWE FYB 2027 archive 🤍' });
       files.forEach((f) => URL.revokeObjectURL(f.preview));
       setFiles([]); setProgress([]); setRemembered(true);
       setLevel(''); setCategory(''); setCaption(''); setEventName(''); setAllowPublic(false);
